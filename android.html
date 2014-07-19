@@ -1,0 +1,93 @@
+<meta charset="utf8"></meta>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-css.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.js.js"></script>
+    <script type="text/javascript" src="js/bootstrp.js"></script>
+<script type="text/javascript" src="js/android.js"></script>
+
+<body ng-app="android">
+
+<div ng-controller="MyCtrl">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <p class="navbar-text" style="
+    text-align: center;
+    font-size: 1.5em;
+">پىروگىرامما تاراتقۇسى</p>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html">AngularJS ئىقتىدار بولىقى</a></li>
+   <li class="active"><a href="css.html">ئۇزدىل CSS دەرسلىكى</a></li>
+     <li class="active"><a href="javascript.html">javascript دەرسلىكى</a></li>
+      <li class="active"><a href="android.html">android دەرسلىكى</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+   
+        <li ng-repeat="i in items | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <div class="alert alert-danger" role="info"data-toggle="modal" data-target="#{{i.id}}" >{{i.bookid}}</div>
+     <!-- /.navbar-collapse -->
+
+<!-- Modal -->
+<div class="modal fade" id="{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">چىكىنىش</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{i.bookid}}</h4>
+      </div>
+      <div class="modal-body">
+        {{i.title}}
+      </br>
+        <a href="{{i.url}}">كۆرەي</a>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">چىكىنىش</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+        </li>
+
+        
+   
+  </div>
+ 
+</div>
+<!--  <center>
+        <div class="konupka">
+  <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"class="btn btn-danger">
+        ئالدىنقىسى
+    </button>
+
+    <button ng-disabled="currentPage >= items.length/pageSize - 1" ng-click="currentPage=currentPage+1" class="btn btn-danger">
+       كىينكىسى
+    </button>
+        </center> -->
+      
+</div>
+  
+</div>
+
+</body>
