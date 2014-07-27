@@ -6,12 +6,12 @@ function MyCtrl($scope) {
   $scope.items = [
 
       
-     /*  {    
+       {    
             id:"myModal4",
             bookid:"hashset تۈرىنى قوللىنىش",
-            url: 'http://www.weebly.com/uploads/1/0/6/7/1067082/java_hashset.mp4',
+            url: 'http://www.weebly.com/uploads/1/0/6/7/1067082/hashset-turi.mp4',
 title:'hashset بىر توپلام تۈرى بولۇپ ،بۇ تۈر ئۇچۇلارنى hashing دەپ ئاتىلىدىغان مىخانىزىم بويىچە ساقلايدۇ،ئاندرويىدتا ئەپ ئاچقاندا بۇخىل تۈر كۆپ قوللىنلىدۇ،بۇخىل تۈربىلەن ئۇچۇلارنى بىر تەرەپ قىلىش ۋە باشقۇرۇش ناھايتى كۈچلۈك'        
-},*/
+},
  {    
             id:"myModal5",
             bookid:"java دا unicode نى قوللىنىش",
